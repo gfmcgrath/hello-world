@@ -1,0 +1,97 @@
+body{
+	font-family: Verdana, sans-serif;
+	font-size: 13px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+header{
+	display: inline-table;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	
+}
+
+#main{
+	box-shadow: 0px 1px 10px #222;;
+	display: inline-table;
+}
+
+nav{
+	text-align: left;
+}
+
+/* BEGIN Navigation Menu Settings */
+.menu{
+	box-shadow: 0px 2px 10px #888;
+	list-style: none; /* Remove bullet points from top level items */
+	display: inline-table; /* Puts menu into website flow and places it above the main content, 'butts' items together. Use inline-table. */
+	/* text-align: center; /* Centres the menu bar. Does not work when used with inline-table. Use text-align on nav element instead.*/ 
+	position: relative; /* Set position of top level menu */
+	padding: 0;
+	width: 100%;
+	background-color: #555;
+	margin: 0;
+}
+
+.menu a{
+	color: #FFF; /* Changes link text color */
+	text-decoration: none; /* Strips underline from links */
+	font-weight: bold;
+}
+
+.menu li{
+	display: inline-block; /* Arranges top-level items horizontally. Use inline-block so that we can resize the 	'buttons;. */ 
+	padding-left: 30px; /* Gives some space between top level menu items */
+	padding-right: 30px; /* Gives some space between top level menu items */
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #555; /* Background color of menu items */
+	width: auto; /* Specify width of 'buttons' in pixels - child items will inherit property value, so dropdown items will also have the same width. */
+	position: relative; /* Makes sure that dropdown menus align with their heading! */
+}
+
+.dropdown:hover  > ul{
+	display: block; /* Display second level list items on mouse-over of top level item*/
+}
+
+.menu li:hover{
+	background-color: #66CC99; /* Changes color of 'button' on mouseover */
+}
+
+.submenu {
+	display: none; /* Hide second level list items */
+	list-style: none; /*Remove bullet points from second level items */
+	position: absolute; /* Set position of dropdown menus in relation to top level menu. Needed to prevent weird behaviour when displaying dropdown */
+	padding: 0; /* Makes sure that dropwdown menus align with their heading! */	
+	left: 0%; /* Makes sure that dropdown menus align with their heading! */
+	top: 100%;
+	
+}
+
+.submenu li{
+	display: block; /* Arranges drop down items vertically. */
+	background-color: #5f6975;
+	box-shadow: 5px 7px 5px #888;
+	border-top: 1px solid #6b727c;
+	border-bottom: 1px solid #575f6a;
+}
+/* Do not mix id's and classes in the menu. Since an ID's value will take preference, this can cause problems. Use all classes? */
+/* END Navigation Menu settings */
+
+footer{
+	text-align: center;
+	font-size: 9px;
+	border-top: 1px dashed #555;
+	background-color: #AAA
+}
+
+#css{
+	display: block;
+}
+
+#html5{
+	display: block;
+}
